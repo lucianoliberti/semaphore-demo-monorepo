@@ -46,6 +46,8 @@ blocks:
         - name: Test
           commands:
             - bundle exec ruby test.rb
+    run:
+      when: 'change_in(''/services/users'', {exclude: ''/services/users/**/*.md''})'
   - name: "\U0001F4B0 — Billing Service"
     dependencies: []
     run:
